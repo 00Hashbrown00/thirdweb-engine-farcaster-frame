@@ -101,7 +101,7 @@ export default async function handler(
 
       return res.status(200).send(
         computeHtml({
-          imagePath: "<next_js_image_path>",
+          imagePath: "/public/GM.gif",
           postType: "mint",
           content: "Mint",
         })
