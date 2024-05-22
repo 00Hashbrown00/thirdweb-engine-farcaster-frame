@@ -8,7 +8,7 @@ export default function Document() {
         <meta property="og:image" content={`${config.hostUrl}/GM.gif`} />
         <meta property="fc:frame" content="vNext" />
         <meta property="fc:frame:image" content={`${config.hostUrl}/GM.gif`} />
-        <meta property="fc:frame:post_url" content="https://${config.hostUrl}/api/mint?type=${postType}"/>
+        <meta property="fc:frame:post_url" content="https://thirdweb-engine-farcaster-frame-ecru.vercel.app/api/mint?type=${postType}"/>
         <meta property="fc:frame:button:1" content="Get started" />
       </Head>
       <body>
