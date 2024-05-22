@@ -5,10 +5,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta property="og:title" content={`Thirdweb Frame`} />
-        <meta property="og:image" content={`public/GM.gif`} />
+        <meta property="og:image" content={`GM.gif`} />
         <meta property="fc:frame" content="vNext" />
-        <meta property="fc:frame:image" content={`public/GM.gif`} />
-        <meta property="fc:frame:post_url" content={`public/GM.gif`} />
+        <meta property="fc:frame:image" content={`GM.gif`} />
+        <meta property="fc:frame:post_url" content={`GM.gif`} />
         <meta property="fc:frame:button:1" content="Get started" />
       </Head>
       <body>
