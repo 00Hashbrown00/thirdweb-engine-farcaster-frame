@@ -46,7 +46,7 @@ export default async function handler(
       if (isNFTOwned) {
         return res.status(200).send(
           computeHtml({
-            imagePath: "${config.hostUrl}/GM.gif",
+            imagePath: "/GM.gif",
             postType: "start",
             content: "You already own the NFT",
           })
