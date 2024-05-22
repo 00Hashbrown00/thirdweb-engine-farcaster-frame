@@ -4,7 +4,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 import NextCors from "nextjs-cors";
 import { z } from "zod";
 import { ThirdWebEngine } from "@/classes/ThirdWebEngine";
-import { config } from "@/config/config"
 
 const requestBodyWarpcastSchema = z.object({
   trustedData: z.object({
@@ -59,7 +58,7 @@ export default async function handler(
       if (isBalanceLow) {
         return res.status(200).send(
           computeHtml({
-            imagePath: "${config.hostUrl}/GM.gif",
+            imagePath: "/GM.gif",
             postType: "start",
             content: "Sorry, we're out of gas!",
           })
@@ -68,7 +67,7 @@ export default async function handler(
 
       return res.status(200).send(
         computeHtml({
-          imagePath: "${config.hostUrl}/GM.gif",
+          imagePath: "/GM.gif",
           postType: "recast",
           content: "Like & recast to mint",
         })
@@ -81,7 +80,7 @@ export default async function handler(
       if (!hasRecasted) {
         return res.status(200).send(
           computeHtml({
-            imagePath: "${config.hostUrl}/GM.gif",
+            imagePath: "/GM.gif",
             postType: "recast",
             content: "Like is required to mint the NFT",
           })
@@ -102,7 +101,7 @@ export default async function handler(
 
       return res.status(200).send(
         computeHtml({
-          imagePath: "/${config.hostUrl}/GM.gif",
+          imagePath: "/GM.gif",
           postType: "mint",
           content: "Mint",
         })
@@ -114,7 +113,7 @@ export default async function handler(
 
       return res.status(200).send(
         computeHtml({
-          imagePath: "${config.hostUrl}/GM.gif",
+          imagePath: "/GM.gif",
           postType: "start", // Do your own custom post_url after user has minted the NFT + clicks your button
           content: "Congrats! The NFT was sent to your wallet",
         })
@@ -123,7 +122,7 @@ export default async function handler(
   } catch (err) {
     return res.status(200).send(
       computeHtml({
-        imagePath: "${config.hostUrl}/GM.gif",
+        imagePath: "/GM.gif",
         postType: "start",
         content: "Something went wrong",
       })
